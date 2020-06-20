@@ -5,7 +5,7 @@ module.exports = {
     authenticate: {
         type: 'user'
     },
-    require: ['testService'],
+    inject: ['testService'],
     body: {
         required: true,
         parameters: {

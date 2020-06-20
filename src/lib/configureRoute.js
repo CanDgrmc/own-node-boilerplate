@@ -27,7 +27,7 @@ async function configure({
 }) {
     const {
         method,
-        require,
+        inject,
         path,
         authenticate,
         body,
