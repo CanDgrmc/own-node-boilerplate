@@ -1,8 +1,10 @@
+"use strict"
 const express = require('express')
 const app = express()
+const lib = require('./lib')
 const {
     createApp
-} = require('./lib')
+} = lib
 const env = process.env.NODE_ENV || 'dev'
 const config = require('./config')[env]
 const db = []
@@ -27,7 +29,7 @@ const run = async  () => {
                     db
                 }
             },
-            lib: require('./lib'),
+            lib,
             common,
             config
         }

@@ -1,3 +1,4 @@
+"use strict"
 const { Log } = require("../common")
 
 module.exports = ({
@@ -25,21 +26,14 @@ module.exports = ({
     
     try{
         const log = new Log({source:'create-app'})
-        console.log({render:{
-            app,
-            middleware,
-            routes,
-            services,
-            repositories,
-            models,
-            db,
-            lib,
-            common,
-            config
+        log.json({render:{
+            app:{
+                test: 'tttt'
+            }
         }})
         log.success('app-successfully-created')
     }catch(e){
-
+        console.log(e)
     }
     
 }
