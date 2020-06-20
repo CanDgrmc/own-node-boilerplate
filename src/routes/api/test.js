@@ -2,7 +2,6 @@
 module.exports = {
     method: 'get',
     path: '/test',
-    
     inject: ['testService'],
     body: {
         required: true,

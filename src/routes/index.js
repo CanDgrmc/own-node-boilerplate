@@ -1,3 +1,6 @@
-module.exports = [
-    require('./test.js')
-]
+module.exports = {
+    '/':[
+        require('./test.js')
+    ],
+    '/api': require('./api')
+}

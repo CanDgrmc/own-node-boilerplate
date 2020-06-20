@@ -1,13 +1,13 @@
 "use strict"
 const { Log } = require("../common")
 
-module.exports = ({
+module.exports = async ({
     render: {
         layers: {
             server: {
                 app
             },
-            middleware,
+            middlewares,
             application: {
                 routes,
                 services,
@@ -26,12 +26,21 @@ module.exports = ({
     
     try{
         const log = new Log({source:'create-app'})
-        log.json({render:{
-            app:{
-                test: 'tttt'
-            }
-        }})
-        log.success('app-successfully-created')
+        
+        const {configureRoutes} = lib
+        const application = await configureRoutes({
+            routes,
+            app,
+            services,
+            config,
+            common,
+            middlewares
+        })
+        
+
+        application.listen(config.application.port,() => {
+            log.success('app-successfully-created')
+        })
     }catch(e){
         console.log(e)
     }

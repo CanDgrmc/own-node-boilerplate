@@ -1,3 +1,4 @@
 module.exports =  {
-    createApp: require('./createApp')
+    createApp: require('./createApp'),
+    configureRoutes: require('./configureRoutes')
 }

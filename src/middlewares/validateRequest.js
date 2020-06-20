@@ -5,18 +5,21 @@ const {
         validationError
     }
 } = require('../common')
-module.exports = ({
+module.exports = (
     req,
     res,
     next,
-    rules
-}) => {
+    {
+        rules
+    }
+) => {
     if (rules == undefined) {
         next()
     }
-
+    console.log(req.method)
+    
     switch (req.method) {
-        case 'get':
+        case 'GET':
             try{
                 validateByRules(req.query, rules.parameters)
                 next()
@@ -29,7 +32,7 @@ module.exports = ({
             }
             
             break
-        case 'post':
+        case 'POST':
             try {
                 validateByRules(req.body, rules.parameters)
             } catch (e) {

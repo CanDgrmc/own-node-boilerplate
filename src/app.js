@@ -18,7 +18,7 @@ const run = async  () => {
                 server: {
                     app
                 },
-                middleware: require('./middlewares'),
+                middlewares: require('./middlewares'),
                 application: {
                     routes: require('./routes'),
                     services: require('./services'),
