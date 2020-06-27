@@ -16,7 +16,6 @@ const AWS = require("aws-sdk");
 AWS.config.update(config.awsConfig);
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 const s3 = new AWS.S3()
-const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 
 
 const db = []
@@ -24,16 +23,6 @@ const db = []
 const common = require('./common')
 const {Log} = common
 const run = async  () => {
-    /**
-     * const userPool = new AmazonCognitoIdentity.CognitoUserPool({
-        IdentityPoolId: "eu-west-1_236eHtn1c",
-        IdentityId:"1jfrqtbfpvgcpcecv1o00o2hqo",
-        DatasetName: "pati"
-    });
-     */
-    
-    
-    
     
     await createApp({
         render: {
