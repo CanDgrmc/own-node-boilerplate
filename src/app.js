@@ -10,6 +10,7 @@ const {
 const env = process.env.PATI_ENV || 'dev'
 const config = require('./config')[env]
 
+
 const AWS = require("aws-sdk");
 
 AWS.config.update(config.awsConfig);
