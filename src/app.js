@@ -19,8 +19,6 @@ const s3 = new AWS.S3()
 const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 
 
-
-
 const db = []
 
 const common = require('./common')
