@@ -9,9 +9,12 @@
   "author": "Can Dgrmc",
   "license": "ISC",
   "dependencies": {
+    "amazon-cognito-identity-js": "^4.3.2",
+    "aws-sdk": "^2.706.0",
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
   }
 }

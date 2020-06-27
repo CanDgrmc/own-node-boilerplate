@@ -1,6 +1,8 @@
 
+const cognito = new AWS.CognitoIdentityServiceProvider();
 class AuthService {
-
+    
+    
     
 }
 
